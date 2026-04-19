@@ -1,4 +1,5 @@
 import HeroSection from "./ui/HeroSection";
+import AboutSection from "./ui/AboutSection";
 
 export default function Home() {
   return (
@@ -6,29 +7,7 @@ export default function Home() {
       <HeroSection />
 
 
-      {/* About/Features */}
-      <section id="about" className="flex flex-col min-h-screen bg-white dark:bg-zinc-900 px-6 py-24 items-center justify-center">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-serif font-bold text-emerald-900 dark:text-emerald-400 mb-8">About & Features</h2>
-          <p className="text-zinc-600 dark:text-zinc-400 text-lg mb-12">
-            Designed for long-term comfort, Kuda Putih House offers a tranquil community environment with state-of-the-art amenities.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-            <div className="bg-emerald-50 dark:bg-zinc-800 p-6 rounded-xl border border-emerald-100 dark:border-zinc-700 shadow-sm">
-              <h3 className="font-bold text-xl mb-3 text-emerald-800 dark:text-emerald-300">Fast Wi-Fi</h3>
-              <p className="text-zinc-600 dark:text-zinc-400">High-speed optical fiber internet dedicated for smooth remote work.</p>
-            </div>
-            <div className="bg-emerald-50 dark:bg-zinc-800 p-6 rounded-xl border border-emerald-100 dark:border-zinc-700 shadow-sm">
-              <h3 className="font-bold text-xl mb-3 text-emerald-800 dark:text-emerald-300">Co-Working Space</h3>
-              <p className="text-zinc-600 dark:text-zinc-400">Quiet, air-conditioned areas suited for focused work and networking.</p>
-            </div>
-            <div className="bg-emerald-50 dark:bg-zinc-800 p-6 rounded-xl border border-emerald-100 dark:border-zinc-700 shadow-sm">
-              <h3 className="font-bold text-xl mb-3 text-emerald-800 dark:text-emerald-300">Weekly Cleaning</h3>
-              <p className="text-zinc-600 dark:text-zinc-400">Professional housekeeping to ensure a pristine and productive stay.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AboutSection />
 
       {/* Rooms */}
       <section id="rooms" className="flex flex-col min-h-screen bg-[#fdfbf7] dark:bg-zinc-950 px-6 py-24 items-center justify-center">

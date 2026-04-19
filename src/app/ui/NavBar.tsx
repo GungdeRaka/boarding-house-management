@@ -72,7 +72,7 @@ export default function NavBar() {
 
   return (
     <header
-      className={`fixed md:rounded-full md:mx-2 top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
+      className={`fixed md:rounded-b-xl shadow-2xl shadow-brand-primarySoft/30 top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
         !isVisible ? "-translate-y-full" : "translate-y-0"
       } ${
         isAtTop
