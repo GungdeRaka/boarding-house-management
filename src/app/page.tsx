@@ -1,16 +1,10 @@
+import HeroSection from "./ui/HeroSection";
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Home / Hero section */}
-      <section id="home" className="flex flex-col items-center justify-center min-h-screen bg-emerald-50 dark:bg-zinc-950 px-6 py-20 text-center">
-        <h1 className="text-5xl md:text-7xl font-serif font-bold text-emerald-900 dark:text-emerald-400 mb-6 tracking-tight">Kuda Putih House</h1>
-        <p className="max-w-2xl text-lg md:text-2xl text-emerald-800/80 dark:text-emerald-500 mb-10">
-          Experience the authentic balance of serene tropical living and modern comfort in the heart of Bali.
-        </p>
-        <a href="#book" className="px-8 py-4 bg-emerald-800 text-white dark:bg-emerald-600 rounded-full font-semibold hover:bg-emerald-900 hover:scale-105 transition-all shadow-lg">
-          Reserve Your Room
-        </a>
-      </section>
+      <HeroSection />
+
 
       {/* About/Features */}
       <section id="about" className="flex flex-col min-h-screen bg-white dark:bg-zinc-900 px-6 py-24 items-center justify-center">
@@ -99,7 +93,7 @@ export default function Home() {
         <div className="max-w-xl w-full bg-white dark:bg-zinc-950 rounded-3xl shadow-2xl p-10 border border-emerald-50 dark:border-zinc-800">
           <h2 className="text-4xl font-serif font-bold text-emerald-900 dark:text-emerald-400 mb-4">Book Your Stay</h2>
           <p className="text-zinc-600 dark:text-zinc-400 mb-8">
-            Tell us when you plan to arrive and we'll check availability for you.
+            Tell us when you plan to arrive and we&apos;ll check availability for you.
           </p>
           <form className="flex flex-col gap-4 text-left">
             <div>

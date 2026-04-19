@@ -77,7 +77,7 @@ export default function NavBar() {
       } ${
         isAtTop
           ? "bg-brand-cream shadow-md"
-          : "bg-brand-cream/10 backdrop-blur-sm shadow-sm pointer-events-auto"
+          : "bg-brand-cream/50 backdrop-blur-md shadow-sm pointer-events-auto"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -98,10 +98,10 @@ export default function NavBar() {
               <a
                 key={link.name}
                 href={link.href}
-                className={`text-sm font-medium transition-all hover:text-brand-primarySoft ${
+                className={`text-sm font-medium transition-all hover:text-brand-accentSoft ${
                   activeSection === link.href.replace("#", "")
                     ? "bg-brand-primary text-brand-cream font-bold scale-105 drop-shadow-sm rounded-full px-4 py-1"
-                    : "text-brand-darkSoft hover:text-brand-primary"
+                    : "text-brand-primarySoft hover:text-brand-accentSoft"
                 }`}
               >
                 {link.name}
