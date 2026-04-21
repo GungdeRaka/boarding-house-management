@@ -2,6 +2,7 @@ import HeroSection from "./ui/HeroSection";
 import AboutSection from "./ui/AboutSection";
 import RoomsOverviewSection from "./ui/RoomsOverviewSection";
 import MemorySection from "./ui/MemorySection";
+import LocationSection from "./ui/LocationSection";
 
 export default function Home() {
   return (
@@ -15,17 +16,8 @@ export default function Home() {
       {/* Memory Section (Replaces Gallery) */}
       <MemorySection />
 
-      {/* Location */}
-      <section id="location" className="flex flex-col min-h-screen bg-white dark:bg-zinc-950 px-6 py-24 items-center justify-center text-center">
-        <h2 className="text-4xl font-serif font-bold text-emerald-900 dark:text-emerald-400 mb-8">Location</h2>
-        <p className="text-zinc-600 dark:text-zinc-400 text-lg mb-10 max-w-2xl">
-          Located centrally in Canggu, Bali, providing walking access to the finest cafes, surfing beaches, and nightlife.
-        </p>
-        <div className="w-full max-w-4xl h-96 bg-zinc-200 dark:bg-zinc-800 rounded-2xl shadow-inner flex flex-col items-center justify-center text-zinc-500">
-          <span className="italic mb-2">Interactive Map Placeholder</span>
-          <span>Jl. Pantai Batu Bolong, Canggu, Bali</span>
-        </div>
-      </section>
+      {/* Location Section */}
+      <LocationSection />
 
       {/* Book Now */}
       <section id="book" className="flex flex-col min-h-screen bg-[#fdfbf7] dark:bg-zinc-900 px-6 py-24 items-center justify-center text-center">

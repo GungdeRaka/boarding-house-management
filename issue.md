@@ -1,24 +1,24 @@
-# Task: Create Memory Section (Replacing Gallery Section)
+# Task: Redesign Location Section
 
 ## Description
-We need to replace the existing Gallery section with a new "Memory Section". This new section will feature two smoothly animated, auto-scrolling carousels designed to showcase our property visually and provide compelling social proof.
+Redesign the existing Location section to provide a more interactive and visually appealing experience. The section should be split into two main parts and include a scroll-triggered animation.
 
 ## Requirements
 
-1. **Top Carousel (Image Gallery):**
-   - Must contain at least 6 different high-quality images showcasing the property, rooms, or facilities.
-   - Images must be rendered using the Next.js `<Image />` component for optimal performance, lazy loading, and proper sizing.
-   - The carousel should feature a smooth, continuous, infinite auto-scroll animation.
+1. **Layout (Split View):**
+   - **Left Side:** Embed a Google Maps view or a high-quality map placeholder showing the exact location: `55FQ+7V Kutuh, Badung Regency, Bali`.
+   - **Right Side:** A concise and engaging description of Kuda Putih House's strategic location, highlighting its proximity to local attractions, beaches, and essential amenities.
 
-2. **Bottom Carousel (Reviews / Social Proof):**
-   - Must display past users' reviews or stories about their experience renting a room here.
-   - **Optimize the review sentences:** Ensure the text is engaging, concise, and clearly highlights the positive aspects of their stay.
-   - This carousel should also feature a smooth, continuous auto-scroll animation (consider scrolling in the opposite direction to the top carousel for visual interest).
+2. **Animation (Scroll-Triggered):**
+   - Add a playful "moving car" animation below the description.
+   - The car should move from **right to left** as the user scrolls down through the section.
+   - Use `framer-motion` for smooth, performance-optimized animation tied to the scroll progress.
 
 3. **Component Architecture:**
-   - Create this section as separated components like `MemorySection` to maintain a clean codebase.
+   - Implement this as a standalone component: `src/app/ui/LocationSection.tsx`.
+   - Ensure the component is responsive, stacking the map and description on mobile devices.
 
 ## Technical Considerations
-- **Animations:** Utilize CSS keyframes or a library like `framer-motion` to achieve the smooth, jank-free auto-scrolling effect.
-- **Responsiveness:** Ensure the carousels and the overall section look great and function perfectly across all device sizes (mobile, tablet, desktop).
-- **Image Optimization:** Always use the `<Image />` tag with appropriate `alt` texts and sizing attributes to prevent layout shifts. If image has "fill" props, make sure to add `sizes` attribute.
+- **Map Integration:** Use an `<iframe>` for the Google Maps embed or a specialized library if preferred. Ensure it is responsive.
+- **Scroll Animation:** Leverage `useScroll` and `useTransform` from `framer-motion` to map the scroll progress to the car's horizontal position.
+- **Styling:** Maintain consistency with the brand's aesthetic (emerald/zinc color palette, refined typography).
