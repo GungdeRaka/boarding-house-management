@@ -1,6 +1,7 @@
 import HeroSection from "./ui/HeroSection";
 import AboutSection from "./ui/AboutSection";
 import RoomsOverviewSection from "./ui/RoomsOverviewSection";
+import MemorySection from "./ui/MemorySection";
 
 export default function Home() {
   return (
@@ -11,19 +12,8 @@ export default function Home() {
 
       <RoomsOverviewSection />
 
-      {/* Gallery */}
-      <section id="gallery" className="flex flex-col min-h-screen bg-emerald-50 dark:bg-zinc-900 px-6 py-24 items-center justify-center">
-        <div className="max-w-5xl mx-auto w-full text-center">
-          <h2 className="text-4xl font-serif font-bold text-emerald-900 dark:text-emerald-400 mb-8">Gallery</h2>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="aspect-square bg-zinc-200 dark:bg-zinc-800 rounded-lg shadow-sm flex items-center justify-center text-zinc-400 italic">
-                Image {i}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Memory Section (Replaces Gallery) */}
+      <MemorySection />
 
       {/* Location */}
       <section id="location" className="flex flex-col min-h-screen bg-white dark:bg-zinc-950 px-6 py-24 items-center justify-center text-center">

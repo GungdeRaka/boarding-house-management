@@ -1,23 +1,24 @@
-# Issue: Rooms Overview Section Missing Content on Mobile/LAN
+# Task: Create Memory Section (Replacing Gallery Section)
 
 ## Description
-There is a rendering bug in the `RoomsOverviewSection` component that needs to be fixed by a senior developer. 
+We need to replace the existing Gallery section with a new "Memory Section". This new section will feature two smoothly animated, auto-scrolling carousels designed to showcase our property visually and provide compelling social proof.
 
-When accessing the application via a local IP network address (e.g., `http://192.168.1.4:3000`) on a mobile device, the UI for the Rooms Overview section fails to render properly. Specifically, only the background is visible—none of the texts or images are rendering.
+## Requirements
 
-However, when accessing the application through `http://localhost:3000` on a desktop/local machine, the images and text render correctly, and the animations run very smoothly without any issues.
+1. **Top Carousel (Image Gallery):**
+   - Must contain at least 6 different high-quality images showcasing the property, rooms, or facilities.
+   - Images must be rendered using the Next.js `<Image />` component for optimal performance, lazy loading, and proper sizing.
+   - The carousel should feature a smooth, continuous, infinite auto-scroll animation.
 
-## Steps to Reproduce
-1. Start the Next.js development server locally.
-2. Connect a mobile device to the same local network.
-3. Access the application via the local IP address on the mobile device (e.g., `http://192.168.1.4:3000`).
-4. Scroll down to the Rooms Overview section.
-5. Observe that only the background is rendered, while the images and texts are missing.
-6. Verify on `localhost:3000` that the section renders and animates perfectly.
+2. **Bottom Carousel (Reviews / Social Proof):**
+   - Must display past users' reviews or stories about their experience renting a room here.
+   - **Optimize the review sentences:** Ensure the text is engaging, concise, and clearly highlights the positive aspects of their stay.
+   - This carousel should also feature a smooth, continuous auto-scroll animation (consider scrolling in the opposite direction to the top carousel for visual interest).
 
-## Expected Behavior
-The Rooms Overview section, including all its texts, images, and animations, should render correctly on mobile devices when accessed via the local network IP address, just as it does on `localhost`.
+3. **Component Architecture:**
+   - Create this section as separated components like `MemorySection` to maintain a clean codebase.
 
-## Notes
-- The issue seems to be specific to network access / mobile viewport rendering.
-- Potential areas to investigate: `framer-motion` animation configurations interacting with screen sizes, Next.js `<Image/>` component behavior on different hostnames, or specific responsive CSS rules (`mobile first` approach considerations) that might be hiding the content unexpectedly.
+## Technical Considerations
+- **Animations:** Utilize CSS keyframes or a library like `framer-motion` to achieve the smooth, jank-free auto-scrolling effect.
+- **Responsiveness:** Ensure the carousels and the overall section look great and function perfectly across all device sizes (mobile, tablet, desktop).
+- **Image Optimization:** Always use the `<Image />` tag with appropriate `alt` texts and sizing attributes to prevent layout shifts. If image has "fill" props, make sure to add `sizes` attribute.
