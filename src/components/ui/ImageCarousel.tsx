@@ -32,7 +32,7 @@ export default function ImageCarousel() {
         {duplicatedImages.map((image, index) => (
           <div
             key={index}
-            className="relative w-72 h-48 md:w-96 md:h-64 rounded-2xl overflow-hidden shadow-lg flex-shrink-0"
+            className="relative w-72 h-48 md:w-96 md:h-64 rounded-2xl overflow-hidden shadow-lg shrink-0"
           >
             <Image
               src={image.src}

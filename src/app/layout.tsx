@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import NavBar from "./ui/NavBar";
+import NavBar from "../components/layout/NavBar";
 
 const inter = Inter({
   variable: "--font-inter",

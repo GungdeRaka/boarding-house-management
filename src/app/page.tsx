@@ -1,9 +1,9 @@
-import HeroSection from "./ui/HeroSection";
-import AboutSection from "./ui/AboutSection";
-import RoomsOverviewSection from "./ui/RoomsOverviewSection";
-import MemorySection from "./ui/MemorySection";
-import LocationSection from "./ui/LocationSection";
-import BookSection from "./ui/BookSection";
+import HeroSection from "../components/sections/HeroSection";
+import AboutSection from "../components/sections/AboutSection";
+import RoomsOverviewSection from "../components/ui/RoomsOverviewSection";
+import MemorySection from "../components/sections/MemorySection";
+import LocationSection from "../components/sections/LocationSection";
+import BookSection from "../components/sections/BookSection";
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">

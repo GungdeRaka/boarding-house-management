@@ -1,5 +1,5 @@
-import ImageCarousel from "./ImageCarousel";
-import ReviewCarousel from "./ReviewCarousel";
+import ImageCarousel from "../ui/ImageCarousel";
+import ReviewCarousel from "../ui/ReviewCarousel";
 
 export default function MemorySection() {
   return (
